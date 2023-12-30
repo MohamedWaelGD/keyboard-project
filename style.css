@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --primary-color: #5C5470;
+    --secondary-color: #352F44;
+    --third-color: #FAF0E6;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: rgb(241, 241, 241);
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--primary-color);
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container {
+    max-width: 95%;
+    margin: auto;
+    padding: 1rem 0rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.input-text {
+    height: 200px;
+    min-height: 150px;
+    max-height: 240px;
+    width: 100% !important;
+    resize: vertical;
+    outline: none;
+    background: var(--third-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: var(--primary-color);
+}
+
+i {
+    pointer-events: none;
+}
+
+@media screen and (min-width: 567px) {
+    .container {
+        max-width: 85%;
+    }
+}
+
+.keyboard-container {
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    padding: 1rem;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+}
+
+.key {
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    outline: none;
+    width: 18px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 100ms;
+}
+
+.key:active, .key.active {
+    background-color: var(--secondary-color);
+}
+
+.key-big {
+    width: 40px;
+}
+
+.key-space {
+    width: 200px;
+}
+
+.d-none {
+    display: none !important;
+}
+
+@media screen and (min-width: 400px) {
+    .key {
+        font-size: 1.2rem;
+        width: 25px;
+        height: 40px;
+    }
+
+    .key-big {
+        width: 50px;
+    }
+    
+    .key-space {
+        width: 270px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .key {
+        width: 40px;
+        height: 50px;
+    }
+
+    .key-big {
+        width: 80px;
+    }
+    
+    .key-space {
+        width: 300px;
+    }
+}
+
+@media screen and (min-width: 815px) {
+    .key {
+        font-size: 1.8rem;
+        width: 60px;
+        height: 70px;
+    }
+
+    .key-big {
+        width: 100px;
+    }
+    
+    .key-space {
+        width: 400px;
+    }
+}
